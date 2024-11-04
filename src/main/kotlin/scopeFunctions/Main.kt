@@ -77,8 +77,8 @@ fun main() {
     println(calc2)
 
     val ttt3 = 100
-    val calc3 = ttt3.calculate3 { a ->
-        2 * (a + a)
+    val calc3 = ttt3.calculate3 {
+        a -> 2 * (a + a)
     }
     println(calc3)
 }
