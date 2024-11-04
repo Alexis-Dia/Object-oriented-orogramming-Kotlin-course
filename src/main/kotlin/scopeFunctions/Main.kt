@@ -2,6 +2,10 @@ package scopeFunctions
 
 import scopeFunctions.dto.Person
 
+/**
+ * https://kotlinlang.ru/docs/scope-functions.html
+ * https://kotlinlang.ru/docs/extensions.html
+ */
 inline fun <T> T?.whenNullAlt(block: (T?) -> T): T {
     if (this == null) {
         return block(this) // "this" is superfluous, but enforces same return type
