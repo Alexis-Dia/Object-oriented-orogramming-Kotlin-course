@@ -28,6 +28,12 @@ fun <T> T.calculate3(block: (T) -> T) : T {
     return block(this)
 }
 
+fun calculate4(x: Int, block: (y: Int) -> Int) : Int {
+    println(x)
+    println(block)
+    return block(x)
+}
+
 fun main() {
     println("Hello, World!")
 
@@ -85,4 +91,9 @@ fun main() {
         a -> 2 * (a + a)
     }
     println(calc3)
+
+    val calc4 = calculate4(50) {
+            a -> a+a
+    }
+    println(calc4)
 }
